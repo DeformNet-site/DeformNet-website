@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DeformNet</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/jquery.easyPaginate.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Top</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden"> <a class="page-scroll" href="#page-top"></a> </li>
+                    <li> <a class="page-scroll" href="#abstract">Abstract</a> </li>
+                    <li> <a class="page-scroll" href="#results">Results</a> </li>
+                    <li> <a class="page-scroll" href="#paper">Paper</a> </li>
+                    <li> <a class="page-scroll" href="#code">Code & Data</a> </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <div class="container">
+        <h1><b>DeformNet</b>: Free-Form Deformation Network for 3D Shape Reconstruction from a Single Image</h1>
+
+        <p>This webpage contains additional results for <a href="http://arxiv.org/abs/">DeformNet: Free-Form Deformation Network for 3D Shape Reconstruction from a Single Image</a>. In the future it will also be updated with directions to get the data and code. </p>
+    
+        <section id="abstract" class="abstract-section">
+        <h2>Abstract</h2>
+        <p>3D reconstruction from a single image is a key problem in multiple applications ranging from robotic manipulation to augmented reality. Prior methods have tackled this problem through generative models which predict 3D reconstructions as voxels or point clouds. However, these methods can be  computationally expensive and miss fine shape details. We introduce a new differentiable layer for 3D data deformation and use it in DeformNet to learn free-form deformations usable on multiple 3D data formats. DeformNet takes an image input, searches the nearest shape template from the database, and deforms the template to match the query image. We evaluate our approach on the ShapeNet database and show that - (a) Free-Form Deformation is a powerful new building block for Deep Learning models that manipulate 3D data (b) DeformNet uses this FFD layer combined with shape retrieval for smooth and detail-preserving 3D reconstruction of qualitatively plausible point clouds with respect to a single query image (c) compared to other state-of-the-art 3D reconstruction methods, DeformNet quantitatively matches or outperforms their benchmarks by significant margins.</p>
+        </section>
+        <section id="results" class="results-section">
+        <h2>Results</h2>
+        <p id = "results-text">This is a random sampling of ouputs from the test set. As in the paper, we present the input image, the input 'template' shape that was deformed by DeformNet, the output of the Point Set Generation 9prior work), the output of DeformNet, and the ground truth point cloud. We also include an animated transition from the template to the output, to more clearly show the effect of the DeformNet deformation; to be clear, the deformation itself is one-shot.</p>
+        <img id="result-image" src = "imgs/results.png">
+        <div id="results_div" class='popup-gallery'>
+            		<div class="result">
+			<a href="imgs/collated/100_0.png" class="res_collated_img" title="img_0"><img src="imgs/collated/100_0.png"></a>
+			<a href="imgs/gifs/anim_100_0.gif" class="res_gif" title="gif_0"><img src="imgs/gifs/anim_100_0.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_11.png" class="res_collated_img" title="img_1"><img src="imgs/collated/100_11.png"></a>
+			<a href="imgs/gifs/anim_100_11.gif" class="res_gif" title="gif_1"><img src="imgs/gifs/anim_100_11.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_7.png" class="res_collated_img" title="img_2"><img src="imgs/collated/100_7.png"></a>
+			<a href="imgs/gifs/anim_100_7.gif" class="res_gif" title="gif_2"><img src="imgs/gifs/anim_100_7.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_6.png" class="res_collated_img" title="img_3"><img src="imgs/collated/100_6.png"></a>
+			<a href="imgs/gifs/anim_100_6.gif" class="res_gif" title="gif_3"><img src="imgs/gifs/anim_100_6.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_1.png" class="res_collated_img" title="img_4"><img src="imgs/collated/100_1.png"></a>
+			<a href="imgs/gifs/anim_100_1.gif" class="res_gif" title="gif_4"><img src="imgs/gifs/anim_100_1.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_10.png" class="res_collated_img" title="img_5"><img src="imgs/collated/100_10.png"></a>
+			<a href="imgs/gifs/anim_100_10.gif" class="res_gif" title="gif_5"><img src="imgs/gifs/anim_100_10.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_2.png" class="res_collated_img" title="img_6"><img src="imgs/collated/100_2.png"></a>
+			<a href="imgs/gifs/anim_100_2.gif" class="res_gif" title="gif_6"><img src="imgs/gifs/anim_100_2.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_13.png" class="res_collated_img" title="img_7"><img src="imgs/collated/100_13.png"></a>
+			<a href="imgs/gifs/anim_100_13.gif" class="res_gif" title="gif_7"><img src="imgs/gifs/anim_100_13.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_5.png" class="res_collated_img" title="img_8"><img src="imgs/collated/100_5.png"></a>
+			<a href="imgs/gifs/anim_100_5.gif" class="res_gif" title="gif_8"><img src="imgs/gifs/anim_100_5.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_14.png" class="res_collated_img" title="img_9"><img src="imgs/collated/100_14.png"></a>
+			<a href="imgs/gifs/anim_100_14.gif" class="res_gif" title="gif_9"><img src="imgs/gifs/anim_100_14.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_4.png" class="res_collated_img" title="img_10"><img src="imgs/collated/100_4.png"></a>
+			<a href="imgs/gifs/anim_100_4.gif" class="res_gif" title="gif_10"><img src="imgs/gifs/anim_100_4.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_15.png" class="res_collated_img" title="img_11"><img src="imgs/collated/100_15.png"></a>
+			<a href="imgs/gifs/anim_100_15.gif" class="res_gif" title="gif_11"><img src="imgs/gifs/anim_100_15.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_3.png" class="res_collated_img" title="img_12"><img src="imgs/collated/100_3.png"></a>
+			<a href="imgs/gifs/anim_100_3.gif" class="res_gif" title="gif_12"><img src="imgs/gifs/anim_100_3.gif"></a>
+		</div>
+		<div class="result">
+			<a href="imgs/collated/100_12.png" class="res_collated_img" title="img_13"><img src="imgs/collated/100_12.png"></a>
+			<a href="imgs/gifs/anim_100_12.gif" class="res_gif" title="gif_13"><img src="imgs/gifs/anim_100_12.gif"></a>
+		</div>
+
+        </div>
+        </section>
+
+        <section id="paper" class="paper-section">
+        <h2>Paper</h2>
+        <p>Link to Arxiv upload of paper forthcoming.</p>
+        <!--<ul>
+            <li><a href="files/paper.pdf">Paper</a></li>
+        </ul>-->
+
+        <!--<h3>Citing this work</h3>
+        <p>If you find this work useful in your research, please consider citing:</p>
+         <pre><code>@inproceedings{?,
+              title={DeformNet: Free-Form Deformation Network for 3D Shape Reconstruction from a Single Image},
+              author={Kurenkov, Andrey and Jingwei, Ji and Garg, Animesh and Mehta, Virag and Gwak, JunYoung and Choy, Chris and Savarese, Silvio},
+              booktitle = {Neural Information Processing Systems {NIPS})},
+          year={2017}}
+         </code></pre>-->
+        </section>
+        
+        <section id="code" class="code-section">
+        <h2>Code & Data</h2>
+        <p>
+        Link to Github for code forthcoming. We used <a href="http://shapenet.cs.stanford.edu">ShapeNet</a> as the base dataset, as explained in the paper. </p>
+        </section>
+        
+        <h2>License</h2>
+        
+        <p>MIT License</p>
+    </div>
+</body>
+</html>
+
