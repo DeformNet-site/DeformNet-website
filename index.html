@@ -56,15 +56,18 @@
     <div class="container">
         <h1><b>DeformNet</b>: Free-Form Deformation Network for 3D Shape Reconstruction from a Single Image</h1>
 
+        <img src="imgs/model.png">
+
         <p>This webpage contains additional results for <b>DeformNet: Free-Form Deformation Network for 3D Shape Reconstruction from a Single Image</b>. In the future it will also be updated with directions to get the data and code. </p>
     
         <section id="abstract" class="abstract-section">
         <h2>Abstract</h2>
         <p>3D reconstruction from a single image is a key problem in multiple applications ranging from robotic manipulation to augmented reality. Prior methods have tackled this problem through generative models which predict 3D reconstructions as voxels or point clouds. However, these methods can be  computationally expensive and miss fine shape details. We introduce a new differentiable layer for 3D data deformation and use it in DeformNet to learn free-form deformations usable on multiple 3D data formats. DeformNet takes an image input, searches the nearest shape template from the database, and deforms the template to match the query image. We evaluate our approach on the ShapeNet database and show that - (a) Free-Form Deformation is a powerful new building block for Deep Learning models that manipulate 3D data (b) DeformNet uses this FFD layer combined with shape retrieval for smooth and detail-preserving 3D reconstruction of qualitatively plausible point clouds with respect to a single query image (c) compared to other state-of-the-art 3D reconstruction methods, DeformNet quantitatively matches or outperforms their benchmarks by significant margins.</p>
+        <div id="mainfig"><img src="imgs/mainres.png"></div>
         </section>
         <section id="results" class="results-section">
         <h2>Results</h2>
-        <p id = "results-text">This is a random sampling of ouputs from the test set. As in the paper, we present the input image, the input 'template' shape that was deformed by DeformNet, the output of the Point Set Generation 9prior work), the output of DeformNet, and the ground truth point cloud. We also include an animated transition from the template to the output, to more clearly show the effect of the DeformNet deformation; to be clear, the deformation itself is one-shot.</p>
+        <p class = "results-text">This is a random sampling of ouputs from the test set. As in the paper, we present the input image, the input 'template' shape that was deformed by DeformNet, the output of the Point Set Generation prior work), the output of DeformNet, and the ground truth point cloud. We also include an animated transition from the template to the output, to more clearly show the effect of the DeformNet deformation; to be clear, the deformation itself is one-shot.</p>
         <img id="result-image" src = "imgs/results.png">
         <div id="results_div" class='popup-gallery'>
             		<div class="result">
@@ -197,6 +200,9 @@
 		</div>
 
         </div>
+        <br>
+        <p class = "results-text">We also present additional ablation results: </p> 
+        <img id="ablation-image" src = "imgs/ablation.png">
         </section>
 
         <section id="paper" class="paper-section">
