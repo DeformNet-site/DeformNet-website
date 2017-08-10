@@ -61,6 +61,10 @@ img {
    text-align: center; 
 }
 
+#iframe_div {
+   text-align: center; 
+}
+
 .result { 
     width: 95%;
     margin: 4%;
@@ -91,6 +95,10 @@ table {
     border-radius: 4px;
 }
 
+iframe {
+    display:block;
+    margin: 0 auto;
+}
 
 .easyPaginateNav a, .light-theme span {
     float: none;
