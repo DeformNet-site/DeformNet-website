@@ -45,12 +45,20 @@ p, li, td{
     font-size: 1.5em;
 }
 
-#results-text {
+.results-text {
     text-align: left;
 }
 
 #result-image {
     margin-bottom:-25px;
+}
+
+#ablation-image {
+    width: 100%;
+}
+
+#mainfig {
+    text-align: center;
 }
 
 img {
